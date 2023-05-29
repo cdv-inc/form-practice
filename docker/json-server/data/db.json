@@ -1,0 +1,299 @@
+{
+  "plans": {
+    "result": 0,
+    "data": {
+      "plans": [
+        {
+          "planId": "10016432",
+          "planType": "1",
+          "name": "【朝食付】チェックアウト12時♪35㎡以上の客室と飛騨高山温泉◇地産地消の朝食を (プランコード：HPBF)",
+          "description": "●アメニティ完備！\n●全室Wi−Fi利用可能！\n●広々とした客室でゆったり滞在！",
+          "dayuseFlg": "0",
+          "salesStartDate": "2022-08-31 00:00",
+          "salesEndDate": "2100-01-01 00:00",
+          "stayPeriodStartDate": "2022-08-31",
+          "stayPeriodEndDate": "2100-01-01",
+          "checkinStartTime": "15:00",
+          "checkinEndTime": "24:00",
+          "resStartDay": "365",
+          "resStartTime": "24:00",
+          "resEndDay": "0",
+          "resEndTime": "24:00",
+          "cancelLimitDay": "0",
+          "cancelLimitTime": "24:00",
+          "resChangeLimitDay": "0",
+          "resChangeLimitTime": "24:00",
+          "breakfastFlg": "0",
+          "breakfastRoomFlg": "0",
+          "breakfastPrivateRoomFlg": "0",
+          "breakfastRestaurantFlg": "0",
+          "dinnerFlg": "0",
+          "dinnerRoomFlg": "0",
+          "dinnerPrivateRoomFlg": "0",
+          "dinnerRestaurantFlg": "0",
+          "stayCountMin": "1",
+          "stayCountMax": "30",
+          "imgUrl": "https://manager.yoyaku.tokyo//cmn/img/facility/10000001/M/1661499701644825.jpg",
+          "detailUrl": "https://go-jrhotel-m.yoyaku.tokyo/ja/closedLogin?key=d7141bb7e7f9353198716f96eb211f2d5fcc10dbe1d77b6c483aecba84b5d902d0b1f86f08207aa61c3245cd3a7bfd11bf2f439878847cbebf67f6675adcbb19&planId=10016432",
+          "custom": { },
+          "attributeList": {
+            "attributeGroupName": "",
+            "attributeName": ""
+          }
+
+        }
+      ]
+    }
+  },
+  "prices": {
+    "result": 0,
+    "data": {
+      "count": 30,
+      "prices": {
+        "0": {
+          "use_date": "2023/04/01",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "1": {
+          "use_date": "2023/04/02",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "2": {
+          "use_date": "2023/04/03",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "3": {
+          "use_date": "2023/04/04",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "4": {
+          "use_date": "2023/04/05",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "5": {
+          "use_date": "2023/04/06",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "6": {
+          "use_date": "2023/04/07",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "7": {
+          "use_date": "2023/04/08",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "8": {
+          "use_date": "2023/04/09",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "9": {
+          "use_date": "2023/04/10",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "10": {
+          "use_date": "2023/04/11",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "11": {
+          "use_date": "2023/04/12",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "12": {
+          "use_date": "2023/04/13",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "13": {
+          "use_date": "2023/04/14",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "14": {
+          "use_date": "2023/04/15",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "15": {
+          "use_date": "2023/04/16",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "16": {
+          "use_date": "2023/04/17",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "17": {
+          "use_date": "2023/04/18",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "18": {
+          "use_date": "2023/04/19",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "19": {
+          "use_date": "2023/04/20",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "20": {
+          "use_date": "2023/04/21",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "21": {
+          "use_date": "2023/04/22",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "22": {
+          "use_date": "2023/04/23",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "23": {
+          "use_date": "2023/04/24",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "24": {
+          "use_date": "2023/04/25",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "25": {
+          "use_date": "2023/04/26",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "26": {
+          "use_date": "2023/04/27",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "27": {
+          "use_date": "2023/04/28",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "28": {
+          "use_date": "2023/04/29",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        },
+        "29": {
+          "use_date": "2023/04/30",
+          "guests": 1,
+          "smrt_id": 10010665,
+          "smrt_name": "スタンダードツイン 【禁煙】 35㎡/ベッド幅120cm",
+          "tax_included_amount": 9600,
+          "room_stock_count": 10
+        }
+      }
+    }
+
+  }
+}
+  
+  

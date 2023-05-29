@@ -1,0 +1,102 @@
+version: '3.5'
+
+services:
+  php:
+    build: ./docker/php-fpm
+    volumes:
+      - ./src:/var/www
+    expose:
+      - "9000"
+    networks:
+      - app-network
+
+  nginx:
+    build: ./docker/nginx
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    depends_on:
+      - php
+    volumes:
+      - ./src:/var/www
+    networks:
+      - app-network
+
+  json-server:
+      build: ./docker/json-server
+      ports:
+        - '3000:3000'
+      volumes:
+        # - ./docker/json-server/data/db.json:/data/db.json
+        - ./docker/json-server/data:/data
+      networks:
+        - app-network
+
+  mysql:
+    platform: linux/x86_64 # M1チップ対応のため追記
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: default
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/mysql/sql:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+    networks:
+      - app-network
+
+  # node:
+  #   image: node:12.13-alpine
+  #   tty: true
+  #   volumes:
+  #     - ./src:/var/www
+  #   working_dir: /var/www
+  #   networks:
+  #     - app-network
+
+  ### Redis ################################################
+  redis:
+    build: ./docker/redis
+    volumes:
+      - ./docker/redis/data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+  minio:
+    build: ./docker/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      # - MINIO_ACCESS_KEY=access
+      # - MINIO_SECRET_KEY=secretkey
+      - MINIO_ROOT_USER=access
+      - MINIO_ROOT_PASSWORD=secretkey
+    volumes:
+      - ./docker/minio/volumes/data:/data
+      - ./docker/minio/volumes/config:/root/.minio
+      - ./docker/minio/policies:/policies
+    networks:
+      - app-network
+
+  ### MailCatcher ################################################
+  mail:
+    build: ./docker/mailcatcher
+    ports:
+      - "1025:1025"
+      - "1080:1080"
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+
