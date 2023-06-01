@@ -84,7 +84,7 @@
             haba: document.getElementById('haba'),
             takasa: document.getElementById('takasa')
         };
-        
+        //foreachで全て無効化
         if (department !== '染織') {
             Object.values(inputs).forEach(function(input) {
                 input.disabled = true;
@@ -92,6 +92,7 @@
             });
         }
 
+        //データが空ならアラートを出す
         function validateForm3() {
             saveFormValues();
             var department = "<?php echo $selectedDepartment; ?>"; 

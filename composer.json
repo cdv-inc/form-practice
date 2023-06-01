@@ -1,5 +1,6 @@
 {
     "require": {
-        "laravel/ui": "^4.2"
+        "laravel/ui": "^4.2",
+        "barryvdh/laravel-debugbar": "^3.8"
     }
 }

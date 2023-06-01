@@ -26,7 +26,11 @@ Route::get('/form1', function () {
 Route::post('/form2', [FormController::class, 'submitForm1'])->name('form1.submit');
 
 // Route::get('/form2', function () {
-//     return view('form2');
+//     if (セッション(){
+//         return view('form2'); 
+//     }
+
+//     return view('form_toppage');
 // });
 
 
@@ -44,3 +48,5 @@ Route::get('/confirmation', function () {
     // 完了画面の処理を記述
     return view('emails.confirmation');
 })->name('confirmation');
+
+

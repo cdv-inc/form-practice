@@ -24,7 +24,7 @@
             </div> 
             <div>
                 <label>市区町村</label>
-                <input type="text" class="form-control" name="addr21" placeholder="中央区"  value="{{ old('addr21') ?: session('addr21') }}" >
+                <input type="text" class="form-control" name="addr21" placeholder="中央区"  value="{{ old('addr21')}}" >
                 <label>番地・号</label>
                 <input type="text" class="form-control" name="strt21" placeholder="○○"  value="{{ old('strt21') ?: session('strt21') }}" >
             </div>
