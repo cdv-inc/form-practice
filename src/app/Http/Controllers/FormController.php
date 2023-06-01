@@ -61,4 +61,77 @@ class FormController extends Controller
         // 送信後の処理（例えば、完了画面へのリダイレクトなど）
         return redirect()->route('confirmation');
     }
+
+
+
+    //追記
+    public function createForm1(Request $request){
+        $form_data = $request->session()->get('form_data');
+        return view('form1',compact('form_data'));
+    }
+
+    public function postForm1(Request $request){
+
+        $form_data = $request->input();
+        if (!$form_data) {
+            return view('form1',compact('form_data'));
+        }
+        //dd($form_data);
+        $request->session()->put('form_data', $form_data);
+        
+        return redirect()->route('create.form2');
+    }
+
+    public function createForm2(Request $request){
+
+        if (session()->missing('form_data')) {
+            return redirect()->route('create.form1');
+        }
+        $form_data = $request->session()->get('form_data');
+        if (!$form_data) {
+            return response('値はありません。');
+        }
+        //dd($form_data); 
+        return view('form2',compact('form_data'));
+    }
+
+
+    public function postForm2(Request $request){
+        
+        $form_data2 = $request->input();
+        dd($form_data2);
+        if (!$form_data2) { 
+            return view('form2',compact('form_data2'));
+        }
+        $request->session()->put('form_data', $form_data2);
+        dd($form_data2);
+        return redirect()->route('create.form3');    
+    }
+
+
+
+    public function createForm3(Request $request){
+
+        // if (session()->missing('form_data')) {
+        //     return redirect()->route('create.form1');
+        // }
+        // $form_data = $request->session()->get('form_data');
+        // if (!$form_data) {
+        //     return response('値はありません。');
+        // }
+        // //dd($form_data); 
+        return view('/form3');
+    }
+
+
+    public function postForm3(Request $request){
+        // $form_data2 = $request->input();
+        // if (!$form_data2) {
+        //     return view('form2',compact('form_data2'));
+        // }
+        // dd($form_data2);
+        // $request->session()->put('form_data', $form_data2);
+
+        // return redirect()->route('create.form3');    
+    }
 }

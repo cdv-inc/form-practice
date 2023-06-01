@@ -8,7 +8,7 @@
     </div>
     <p>選択された部門: <?php echo session('selectedDepartment'); ?></p>
     <?php $selectedDepartment = session('selectedDepartment'); ?>
-    <form action="form3" method="POST" onsubmit="return validateForm3()">        
+    <form action="post-form-2" method="POST" onsubmit="return validateForm3()">        
         @csrf   
         <div class="question">
             <div class="category">
