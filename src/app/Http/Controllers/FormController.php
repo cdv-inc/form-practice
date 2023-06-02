@@ -70,7 +70,7 @@ class FormController extends Controller
     public function createForm1(Request $request){
         
         $form_data = $request->session()->get('form_data');
-
+        //var_dump($form_data);
         return view('form1',compact('form_data'));
     }
 
@@ -84,7 +84,6 @@ class FormController extends Controller
         if (!$form_data) {
             return view('form1',compact('form_data'));
         }
-        //dd($form_data);
         $request->session()->put('form_data', $form_data);
         
         return redirect()->route('create.form2');
@@ -100,7 +99,7 @@ class FormController extends Controller
         if (!$form_data) {
             return response('値はありません。');
         }
-        //dd($form_data); 
+        //var_dump($form_data); 
         return view('form2',compact('form_data'));
     }
 

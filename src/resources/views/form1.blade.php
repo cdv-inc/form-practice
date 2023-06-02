@@ -55,7 +55,7 @@
             </div>
         </div>
         <button type="submit" class="custom-button" >次へ</button>
-        <button type="button" name="reset" onclick="<?php session()->forget('form_data'); ?>">リセット</button>    </form>
+    </form>
 
     <script>
 
