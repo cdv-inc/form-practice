@@ -25,15 +25,15 @@
             </div>
                 <div class="myname">
                     <label for="oku">奥行(径):</label>
-                    <input type="number" id="oku" name="oku" placeholder="1" value="{{ session('form_data2.oku') }}">cm
+                    <input type="number" id="oku" name="oku" placeholder="1" value="{{ old('oku') ?: session('form_data2.oku') }}">cm
                 </div>
                 <div class="myname">
                     <label for="haba">幅:</label>
-                    <input type="number" id="haba" name="haba" placeholder="2" value="{{ session('form_data2.haba') }}">cm
+                    <input type="number" id="haba" name="haba" placeholder="2" value="{{ old('haba') ?: session('form_data2.haba') }}">cm
                 </div>
                 <div class="myname">
                     <label for="takasa">高:</label>
-                    <input type="number" id="takasa" name="takasa" placeholder="3" value="{{ session('form_data2.takasa') }}">cm
+                    <input type="number" id="takasa" name="takasa" placeholder="3" value="{{ old('takasa') ?: session('form_data2.takasa') }}">cm
                 </div>
         </div>
         <button type="submit" class="custom-button">次へ</button>
