@@ -6,32 +6,39 @@
         <p>事務局が設定したメッセージ</p>
         <p>郵送で出品申込書を提出される場合は、こちらのフォームは手続き不要です。</p>
     </div>
-    <p>選択された部門: <?php echo session('selectedDepartment'); ?></p>
-    <?php $selectedDepartment = session('selectedDepartment'); ?>
+    @if (!empty($form_data))
+    @foreach($form_data as $key => $value)
+        @if ($value)
+            <p>{{ $key }}の値: {{ $value }}</p>
+        @endif
+    @endforeach
+@endif
+    <p>Departmentの値: {{ $form_data['Department'] }}</p>
     <form action="post-form-2" method="POST" onsubmit="return validateForm3()">        
         @csrf   
         <div class="question">
             <div class="category">
                 <span class="category-label">寸法</span>
-                @if ($selectedDepartment === '染織')
+                @if ($form_data['Department'] === '染織')
                     <span class="required-label">必須</span>
                 @endif
             </div>
                 <div class="myname">
                     <label for="oku">奥行(径):</label>
-                    <input type="number" id="oku" name="oku" placeholder="1" value="{{ old('oku', session('oku')) }}">cm
+                    <input type="number" id="oku" name="oku" placeholder="1" value="{{ session('form_data2.oku') }}">cm
                 </div>
                 <div class="myname">
                     <label for="haba">幅:</label>
-                    <input type="number" id="haba" name="haba" placeholder="2" value="{{ old('haba', session('haba')) }}">cm
+                    <input type="number" id="haba" name="haba" placeholder="2" value="{{ session('form_data2.haba') }}">cm
                 </div>
                 <div class="myname">
                     <label for="takasa">高:</label>
-                    <input type="number" id="takasa" name="takasa" placeholder="3" value="{{ old('takasa', session('takasa')) }}">cm
+                    <input type="number" id="takasa" name="takasa" placeholder="3" value="{{ session('form_data2.takasa') }}">cm
                 </div>
         </div>
         <button type="submit" class="custom-button">次へ</button>
         <button type="button" onclick="resetFormValues()">リセット</button>
+        <a href="{{ route('create.form1') }}">戻る</a>
     </form>
     <script>
 
@@ -39,10 +46,11 @@
         //     saveFormValues();
         // };
         // ページがロードされたときに入力値を復元する
+        /*
         window.onload = function() {
             restoreFormValues();
         };
-
+        */
         // 入力した値をセッションに保存
         function saveFormValues() {
             var form = document.querySelector('form');
@@ -75,8 +83,7 @@
             sessionStorage.clear();
         }
 
-        var department = "<?php echo $selectedDepartment; ?>";
-        //var department = "<?php echo session('selectedDepartment'); ?>"
+        
 
         
         var inputs = {
@@ -85,7 +92,7 @@
             takasa: document.getElementById('takasa')
         };
         //foreachで全て無効化
-        if (department !== '染織') {
+        if ('{{ $form_data["Department"] }}' !== '染織') {
             Object.values(inputs).forEach(function(input) {
                 input.disabled = true;
                 input.style.backgroundColor = '#f1f1f1';
@@ -95,7 +102,7 @@
         //データが空ならアラートを出す
         function validateForm3() {
             saveFormValues();
-            var department = "<?php echo $selectedDepartment; ?>"; 
+            var department = '{{ $form_data["Department"] }}';
             var okuInput = document.getElementById('oku');
             var habaInput = document.getElementById('haba');
             var takasaInput = document.getElementById('takasa');

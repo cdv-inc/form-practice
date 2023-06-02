@@ -15,6 +15,9 @@
             <button type="submit" class="custom-button">最終画面へ</button>
         </form>
     </div>
+    <!-- ここに表示させたい変数を埋め込む -->
+    <p>form_data: {{ print_r($form_data, true) }}</p>
+    <p>form_data2: {{ print_r($form_data2, true) }}</p>
     <script>
         document.getElementById('upload-form').addEventListener('submit', function(e) {
             var imageInput = document.getElementById('image');

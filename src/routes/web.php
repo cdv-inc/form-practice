@@ -35,6 +35,13 @@ Route::post('/post-form-2', [FormController::class, 'postForm2'])->name('post.fo
 
 Route::get('/create-form-3', [FormController::class, 'createForm3'])->name('create.form3');
 Route::post('/post-form-3', [FormController::class, 'postForm3'])->name('post.form3');
+
+Route::post('/save', [FormController::class, 'save'])->name('save');
+
+Route::get('/thankyou', [FormController::class, 'thankyou'])->name('thankyou');
+Route::get('/toppage', [FormController::class, 'toppage'])->name('toppage');
+
+
 //
 
 

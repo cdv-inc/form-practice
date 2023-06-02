@@ -6,6 +6,13 @@
         <p>事務局が設定したメッセージ</p>
         <p>郵送で出品申込書を提出される場合は、こちらのフォームは手続き不要です。</p>
     </div>
+    @if (!empty($form_data))
+        @foreach($form_data as $key => $value)
+            @if ($value)
+                <p>{{ $key }}の値: {{ $value }}</p>
+            @endif
+        @endforeach
+    @endif
     <form action="post-form-1" method="POST">        
         @csrf
         <div class="question">
@@ -20,17 +27,17 @@
             </div>
             <div>
                 <label>都道府県</label>
-                <input type="text" class="form-control" name="pref21" placeholder="東京都"  value="{{ old('pref21') ?: session('form_data.pref21') }}" >
+                <input type="text" class="form-control" id="pref21" name="pref21" placeholder="東京都"  value="{{ old('pref21') ?: session('form_data.pref21') }}" >
             </div> 
             <div>
                 <label>市区町村</label>
-                <input type="text" class="form-control" name="addr21" placeholder="中央区"  value="{{ old('addr21') ?: session('form_data.addr21') }}" >
+                <input type="text" class="form-control" id="addr21" name="addr21" placeholder="中央区"  value="{{ old('addr21') ?: session('form_data.addr21') }}" >
                 <label>番地・号</label>
-                <input type="text" class="form-control" name="strt21" placeholder="○○"  value="{{ old('strt21') ?: session('form_data.strt21') }}" >
+                <input type="text" class="form-control" id="strt21" name="strt21" placeholder="○○"  value="{{ old('strt21') ?: session('form_data.strt21') }}" >
             </div>
             <div>
                 <label>建物名・部屋番号</label>
-                <input type="text" class="form-control" name="strt22" placeholder="○○" value="{{ old('strt22') ?: session('form_data.strt22') }}" >
+                <input type="text" class="form-control" id="strt22" name="strt22" placeholder="○○" value="{{ old('strt22') ?: session('form_data.strt22') }}" >
             </div>
         </div>
         <div class="question">
@@ -51,11 +58,6 @@
         <button type="button" name="reset" onclick="<?php session()->forget('form_data'); ?>">リセット</button>    </form>
 
     <script>
-        // 入力値をリセットする
-        function resetFormValues() {
-            var form = document.querySelector('form');
-            form.reset();
-            sessionStorage.clear();
-        }
+
     </script>
 @endsection
