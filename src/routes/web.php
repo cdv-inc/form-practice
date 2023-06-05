@@ -41,6 +41,7 @@ Route::post('/save', [FormController::class, 'save'])->name('save');
 Route::get('/thankyou', [FormController::class, 'thankyou'])->name('thankyou');
 Route::get('/toppage', [FormController::class, 'toppage'])->name('toppage');
 
+Route::post('/reset-form-data', [FormController::class, 'resetFormData'])->name('reset-form-data');
 
 //
 

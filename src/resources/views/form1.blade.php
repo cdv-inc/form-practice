@@ -55,9 +55,12 @@
             </div>
         </div>
         <button type="submit" class="custom-button" >次へ</button>
+
     </form>
 
-    <script>
 
-    </script>
+    <form action="reset-form-data" method="POST" style="display: inline;">
+        @csrf
+        <button type="submit" name="reset" class="custom-button">リセット</button>
+    </form>
 @endsection

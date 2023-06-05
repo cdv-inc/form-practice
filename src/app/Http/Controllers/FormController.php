@@ -212,4 +212,12 @@ class FormController extends Controller
         echo('トークンが違うためトップページに移動しました');
         return view('toppage');
     }
+
+    public function resetFormData(){
+        session()->forget('form_data');
+        // 他の処理やリダイレクトなど必要な処理を追加することもできます
+    
+        // リダイレクトの例:
+        return redirect()->route('create.form1');
+    }
 }
